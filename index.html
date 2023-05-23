@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML na Prática - Desafio de Projeto DIO</title>
+    </head>
+    <body>
+        <header>
+            <h1 id="inicio"><font color="#000066">Desafio de Projeto HTML #1 - DIO</font></h1>
+            <hr>
+        </header>
+        <h2>Índice</h2>
+        <nav>
+            <ul>
+                <li><a href="#intro"><strong>Introdução</strong></a></li>
+                <li><a href="#secao1">Seção 1 - <i>Estrutura Básica do Documento <abbr title="HyperText Markup Language">HTML</abbr></i></a></li>
+                <li><a href="#secao2">Seção 2 - <i>Tags Básicas</i></a></li>
+                <li><a href="#secao3">Seção 3 - <i>Atributos</i></a></li>
+                <li><a href="#secao4">Seção 4 - <i>Listas</i></a></li>
+                <li><a href="#secao5">Seção 5 - <i>Links</i></a></li>
+                <li><a href="#secao6">Seção 6 - <i>Imagens</i></a></li>
+                <li><a href="#novidade" title="Descubra os próximos passos para esse blog"><strong>Próximos passos...</strong></a></li>
+                <li><a href="#referencias"><strong>Referências</strong></a></li>
+            </ul>
+            <hr>
+        </nav>
+
+        <h2 id="intro">Introdução</h2>
+        <h4>Bem vindo(a) ao meu blog sobre HTML e desenvolvimento Web!</h4>
+        <p>Aqui estou, embarcando em uma jornada de aprendizado e compartilhando com você tudo o que descubro sobre HTML, a linguagem fundamental para criar páginas da web. Este blog é o meu diário de aprendizado, onde documentarei os conceitos essenciais, dicas práticas e exemplos relevantes à medida que mergulho no mundo do HTML.</p>
+        <p>Á medida que aprendo, explorarei uma ampla variedade de tópicos relacionados ao HTML, desde as tags mais comuns até o uso de atributos para aprimorar a funcionalidade e aparência dos elementos HTML. Vamos juntos desvendar técnicas de formatação de texto, criação de links e navegação, manipulação de imagens, construção de formulários interativos e muito mais.</p>
+        <p>Ao longo do caminho, compartilharei minhas descobertas sobre as melhores práticas de desenvolvimento web, reestruturando esse blog com os conhecimentos que for adquirindo ao longo do caminho. Inclusive separar as preocupações de estilo com o uso de CSS<sup>*</sup>.</p>
+        <p>Não importa se você é um iniciante ou entusiasta experiente no desenvolvimento web, convido você a acompanhar meu progresso e aprender junto comigo. <mark>Este blog é o meu espaço para consolidar meu conhecimento e compartilhar minhas experiências à medida que construo minhas próprias páginas web incríveis.</mark></p>
+        <p>Então, junte-se a mim nessa jornada de aprendizado. Estou animado para descobrir mais o HTML e aprimorar minhas habilidades de desenvolvimento web. Espero que você encontre inspiração e informações valiosas em cada postagem.</p>
+        <p>Venha comigo e vamos explorar o maravilhoso mundo do HTML juntos!</p>
+        <small><strong><sup>*</sup>Utilizei a tag <font size="4"><code>&lt;font&gt;</code></font> nesse código para fins didáticos, porém essa tag foi considerada obsoleta no HTML5 e é recomendado usar CSS para estilizar o texto.</strong></small><br><br>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+        
+        <h2 id="secao1">Estrutura Básica do Documento HTML</h2>
+        <p>A estrutura básica do documento HTML fornece um esqueleto para organizar o conteúdo e as configurações de uma página web.</p>
+        <ol>
+            <li><strong><code>&lt;!DOCTYPE html&gt;</code>:</strong> define o tipo de documento HTML que está sendo usado. Nesse caso, indica que o documeto HTML está sendo escrito em conformidade com os padrões da especificação HTML5</li>
+            <li><strong><code>&lt;html&gt;</code>:</strong> é o elemento raiz do documento HTML. Todos os outros elementos HTML são filhos diretos ou indiretos dessa tag. Ela envolve todo o conteúdo da página.</li>
+            <li><strong><code>&lt;head&gt;</code>:</strong> é usada para incluir metadados e informações sobre o documentos HTML, como título, links para folhas de estilo CSS, JavaScript, metatags e outras configurações. O conteúdo inserido dentro dessa tag não é exibido na página, mas fornece informações para o navegador e mecanismos de busca.</li>
+            <li><strong><code>&lt;body&gt;</code>:</strong> é o local onde o conteúdo visível da página é inserido. Ela contém todos os elementos HTML que serão exibidos no navegador, como texto, imagens, links, listas, formulários, etc.</li>
+        </ol>
+        <h5>Veja abaixo como fica a estrutura básica do documento HTML: </h5>
+        <pre>&lt;!DOCTYPE html&gt;</pre>
+        <pre>&lt;html&gt;</pre>
+        <pre>    &lt;head&gt;</pre>
+        <pre>    &lt;/head&gt;</pre>
+        <pre>    &lt;body&gt;</pre>
+        <pre>    &lt;/body&gt;</pre>
+        <pre>&lt;/html&gt;</pre>
+        <br>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+
+        <h2 id="secao2">Tags Básicas</h2>
+        <p>Antes de apresentar algumas tags básicas, vamos ver o que são <i>tags pair</i> (ou <i>tags contêiner</i>) e <i>tags self-closing</i> (ou <i>tags vazias</i>):</p>
+        <h3><i>Tags pair</i> ou <i>Tags contêiner</i></h3>
+        <p>São usadas para envolver e delimitar o conteúdo que desejamos aplicar uma formatação ou estrutura específica. A estrutura básica desse tipo de tag é <mark><code>&lt;html&gt; &lt;/html&gt;</code></mark>, onde a primeira é a tag de abertura e a segunda é a tag de fechamento. O conteúdo fica entre elas e os atributos ficam dentro da tag de abertura.</p>
+        <h3><i>Tags self-closing</i> ou Tags vazias</h3>
+        <p>São usadas para indicar a presença de um elemento ou conteúdo adicional ou sem a necessidade de uma tag de fechamento. Sendo assim, ela só possui a tag de abertura.</p>
+        <h3>Algumas tags</h3>
+        <ul>
+            <li><strong><code>&lt;p&gt; &lt;/p&gt;</code>:</strong> usada para fazer parágrafos;</li>
+            <li><strong><code>&lt;blockquote&gt; &lt;/blockquote&gt;</code>:</strong> usada para criar um bloco de citação;</li>
+            <li><strong><code>&lt;strong&gt; &lt;/strong&gt;</code>:</strong> usada para deixar o texto em <strong>negrito</strong>;</li>
+            <li><strong><code>&lt;u&gt; &lt;/u&gt;</code>:</strong> usada para deixar o texto <u>sublinhado</u>;</li>
+            <li><strong><code>&lt;i&gt; &lt;/i&gt;</code>:</strong> usada para deixar o texto em <i>itálico</i>;</li>
+            <li><strong><code>&lt;mark&gt; &lt;/mark&gt;</code>:</strong> usada para deixar o texto <mark>marcado</mark>;</li>
+            <li><strong><code>&lt;sup&gt; &lt;/sup&gt;</code>:</strong> usada para criar texto sobrescrito, ou seja, texto que é exibido acima da linha de base normal <sup>exemplo</sup>;</li>
+            <li><strong><code>&lt;hr&gt;</code>:</strong> cria uma linha horizontal;</li>
+            <li><strong><code>&lt;br&gt;</code>:</strong> insere uma quebra de linha;</li>
+            <li><strong><code>&lt;small&gt; &lt;/small&gt;</code>:</strong> deixa o texto <small>pequeno</small>;</li>
+            <li><strong><code>&lt;font&gt; &lt;/font&gt;</code>:</strong> era amplamente usada no passado para definir formatação de texto, como <font color="red">cor</font>, tamanho e família da fonte. No entando, ela foi considerada obsoleta no HTML5 e é recomendado usar CSS para estilizar o texto.</li>
+            <li><strong><code>&lt;del&gt; &lt;/del&gt;</code>:</strong> é usada para indicar a exclusão ou remoção de texto em um documento html, <del>exemplo</del>;</li>
+            <li><strong><code>&lt;abbr&gt; &lt;/abbr&gt;</code>:</strong> é usada para definir uma abreviação ou sigla em um documento HTML. Pode ser exibida em tooltip quando o usuário passa o mouse sobre ela, dependendo do estilo aplicado.</li>
+        </ul>
+        <p>Para descobrir mais tags <a href="https://www.w3schools.com/tags/" target="_blank">clique aqui</a>.</p>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+
+        <h2 id="secao3">Atributos</h2>
+        <p>Os atributos fornecem informações adicionais sobre elementos (tags). Eles são usados para modificar o comportamento ou a apareência dos elementos, fornecer metadados ou associar informações específicas a eles. São especificados dentro da tag de abertura de um elemento e possuem um nome e um valor. O nome do atributo é seguido pelo símbolo de igual (=) e o valor é definido entre as aspas duplas ("") ou simples ('').</p>
+        <p><strong>Vamos ver um exemplo: </strong></p>
+        <blockquote><code>&lt;img src="imagem.png" alt="Imagem de exemplo" height="100" width="100"&gt;</code></blockquote>
+        <p>No exemplo usamos a tag de inserção de imagem, e temos os seguintes atributos:</p>
+        <ul>
+            <li><strong>src:</strong> atributo que informa onde a imagem está localizada (pasta local ou URL);</li>
+            <li><strong>alt:</strong> texto alternativo que aparece quando a imagem não carrega por algum motivo;</li>
+            <li><strong>height:</strong> altura em pixels da imagem;</li>
+            <li><strong>width:</strong> largura em pixels da imagem;</li>
+        </ul>
+
+        <h3><i>Atributos genéricos</i></h3>
+        <ul>
+            <li><strong>id:</strong> é um atributo usado para atribuir um identificador exclusivo a um elemento, permitindo selecioná-lo de forma precisa e aplicar estilos, manipulação de elementos ou interações específicas com base nesse identificador através de CSS ou JavaScript.</li>
+            <li><strong>style:</strong> é um atributo usado para definir estilos de formatação, como cores, fontes e tamanhos, diretamente dentro do elemento ou da página.</li>
+            <li><strong>class:</strong> é um atributo usado para atribuir uma classe ao elemento, permitindo a aplicação de estilos ou manipulação específica através de CSS ou JavaScript.</li>
+        </ul>
+
+        <h3><i>Atributos específicos (exemplos)</i></h3>
+        <ul>
+            <li><strong>type:</strong> é uma atributo específico da tag <code>&lt;input&gt;</code>;</li>
+            <li><strong>src:</strong> é um atributo específico da tag <code>&lt;img&gt;</code>;</li>
+            <li><strong>href:</strong> é um atributo específico da tag <code>&lt;a&gt;</code>;</li>
+        </ul>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+
+        <h2 id="secao4">Listas</h2>
+        <h3><i>Lista Ordenada</i></h3>
+        <p>Para criar uma lista ordenada segue-se a estrutura abaixo:</p>
+        <pre>&lt;ol&gt;</pre>
+        <pre>    &lt;li&gt; Item 1 &lt;/li&gt;</pre>
+        <pre>    &lt;li&gt; Item 2 &lt;/li&gt;</pre>
+        <pre>    &lt;li&gt; Item 3 &lt;/li&gt;</pre>
+        <pre>&lt;/ol&gt;</pre>
+        <p>Sendo que: </p>
+        <blockquote><code>&lt;ol&gt; &lt;/ol&gt;</code></blockquote>
+        <p>identifica uma lista ordenada.</p>
+        <p>Irá aparecer assim: </p>
+            <ol>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ol><br>
+        
+        <h3><i>Lista Não Ordenada</i></h3>
+        <p>Para criar uma lista não ordenada segue-se a estrutura abaixo:</p>
+        <pre>&lt;ul&gt;</pre>
+        <pre>    &lt;li&gt; Item 1 &lt;/li&gt;</pre>
+        <pre>    &lt;li&gt; Item 2 &lt;/li&gt;</pre>
+        <pre>    &lt;li&gt; Item 3 &lt;/li&gt;</pre>
+        <pre>&lt;/ul&gt;</pre>
+        <p>Sendo que: </p>
+        <blockquote><code>&lt;ul&gt; &lt;/ul&gt;</code></blockquote>
+        <p>identifica uma lista não ordenada.</p>
+        <p>Irá aparecer assim: </p>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li>Item 3</li>
+            </ul><br>
+        
+        <blockquote>A tag <code>&lt;li&gt; &lt;/li&gt;</code> é a responsável em criar os itens das listas.</blockquote>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+
+        <h2 id="secao5">Links</h2>
+        <p>Os links servem para criar ancoragem na página e / ou redirecionar para outras páginas.</p>
+        <p>A tag utilizada para criar os links é <code>&lt;a&gt; &lt;/a&gt;</code> e a sua estrutura básica é: </p>
+        <blockquote><pre>&lt;a href="https://www.dio.me/"&gt; Dio.Me &lt;/a&gt;</pre></blockquote>
+        <p>Fica assim: <a href="https://www.dio.me/" target="_blank">Dio.me</a> e ao clicar nesse link irá te direcionar para a página da DIO.</p>
+        <p>Alguns atributos dessa tag:</p>
+        <ul>
+            <li><strong>href:</strong> é o atributo onde inserimos a URL ou o ID de onde queremos ancorar (quando queremos direcionar para outro local na mesma página).</li>
+            <blockquote>Para realizar a ancoragem colocamos href="#nomedoid", ou seja, "#" + o nome do ID que você definiu em algum lugar da sua página que você quer direcionar o usuário ao clicar no link.</blockquote>
+            <li><strong>target:</strong> é o atributo onde podemos definir se ao clicar no link o mesmo será aberto na mesma janela (target="_self") ou em uma nova janela (target="_blank").</li>
+            <li><strong>title:</strong> é o atributo que cria aquele balão que aparece quando passamos o mouse em cima do link.</li>
+        </ul>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+
+        <h2 id="secao6">Imagens</h2>
+        <p>A tag para inserir imagens é <code>&lt;img&gt; &lt;/img&gt;</code>e a sua estrutura básica é: </p>
+        <blockquote><pre>&lt;img src="/src/imagens/imagem1.png"&gt;</pre></blockquote>
+        <p>Aparecerá o seguinte:</p>
+        <img src="src/imagens/imagem1.png" alt="Paisagem" width="120" height="100">
+        <p>Alguns atributos dessa tag:</p>
+        <ul>
+            <li><strong>src:</strong> atributo que informa onde a imagem está localizada (pasta local ou URL);</li>
+            <li><strong>alt:</strong> texto alternativo que aparece quando a imagem não carrega por algum motivo;</li>
+            <li><strong>height:</strong> altura em pixels da imagem;</li>
+            <li><strong>width:</strong> largura em pixels da imagem;</li>
+        </ul>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+
+        <h2 id="novidade">Próximos Passos</h2>
+        <p>A ideia desse blog é atender os requisitos do Primeiro Desafio de Projeto da Formação HTML Web Developer ofertado pela DIO, entretanto, conforme avanço no curso irei aplicar os conhecimentos adquiridos nessa página.</p>
+        <p>Pretendo trazer, pelo menos, mais 4 seções: </p>
+        <ul>
+            <li>Seção 7 - Estilos e Formatação</li>
+            <li>Seção 8 - Formulários</li>
+            <li>Seção 9 - Tabelas</li>
+            <li>Seção 10 - Elementos Semânticos</li>
+        </ul>
+        <p>Além das seções mencionadas acima, também pretendo formatar o estilo da página utilizando CSS e JavaScript.</p>
+        <p>Caso tenha alguma sugestão ou queira me contatar clique nos botões abaixo: </p>
+        <button><a href="https://github.com/NanneSantin" target="_blank">GitHub</a></button>
+        <button><a href="https://www.linkedin.com/in/elaine-stefani/" target="_blank">LinkedIn</a></button><br><br>
+        <button><a href="#inicio">Voltar ao início</a></button>
+        <hr>
+
+        <h2 id="referencias">Referências</h2>
+        <p>Todo o conteúdo dessa página foi realizado com base nos conhecimentos adquiridos pelo curso de Formação HTML Web Developer ofertado pela Dio que pode ser acessado clicando <a href="https://www.dio.me/bootcamp/html-web-developer" target="_blank">aqui</a>, e através da <a href="https://chat.openai.com/" target="_blank">ChatGPT</a>.</p>
+        <button><a href="#inicio">Voltar ao início</a></button><br><br>
+    </body>
+</html>
